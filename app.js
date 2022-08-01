@@ -4,26 +4,29 @@ function wordCount(comment, commentValue) {
     if (commentValue.length>= 140){
         wordCounting.style.color = "red";
         comment.style.borderColor = "red";
-        comment.s
-        tyle.borderwidth = "2px"; 
-        wordCounting.innerHTML = "140" +" / 140" + "  Word limits is up to 140."
+        comment.style.borderwidth = "2px"; 
+        wordCounting.innerHTML = commentValue.length +" / 140" + "  Word limit is up to 140.";
     } else if (commentValue.length< 10) {
         wordCounting.style.color = "";
         comment.style.borderColor = "";
     }
 }
-let commentCotent = document.querySelector("textarea");
 let nameBox = document.querySelector("#nameBox");
 let eEmail = document.querySelector("#eEmail");
+let commentCotent = document.querySelector("textarea");
 let commentReview = document.querySelector(".commentReview");
-
+console.log(commentCotent.value);
 function postComment() {
-    console.log(commentCotent.value);
     if (nameBox.value==""||eEmail.value==""||commentCotent.value==""){
         console.log("ger");
-        clear();
         return ;
     } 
+    if (commentCotent.value.length>140){
+        console.log(commentCotent.value.length);
+        window.alert("Sorry, You had exceed the word count.")
+        return ;
+    } 
+    console.log("jj");
     if (commentReview.childNodes.length===0) {
         let reviewTitle = document.createElement("h1");
         reviewTitle.innerHTML= "Comment Review"
