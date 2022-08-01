@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Comment Box</title>
+  </head>
+  <body>
+    <h1>Comment Box</h1>
+    <section class="commentReview"></section>
+    <form>
+      <label for="nameBox">name *</label><br />
+      <input type="text" id="nameBox" name="nameBox" required /><br />
+      <label for="eEmail">email *</label><br />
+      <input type="text" id="eEmail" name="eEmail" required /><br />
+      <label for="comment">comment <span id="wordCounting">/ 140</span></label
+      ><br />
+      <textarea
+        id="comment"
+        name="comment"
+        wrap="hard"
+        onkeyup="wordCount(this,this.value)"
+      ></textarea
+      ><br /><br />
+      <input type="submit" value="Submit" onclick="postComment()" />
+    </form>
+    <script src="./app.js"></script>
+  </body>
+</html>

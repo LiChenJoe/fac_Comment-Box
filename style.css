@@ -1,0 +1,61 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 90vw;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+h1 {
+    margin: 20px 0;
+}
+
+form {
+    width: 90vw;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+input {
+    width: 100%;
+}
+
+ #comment {
+    width: 100%;
+    height: 100px;
+}
+
+#comment:focus{
+    outline:none;
+} 
+
+.commentReview {
+    margin-top: 20px;
+}
+
+.reviewCommentBlock {
+    background-color: azure;
+    border-radius: 30px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.reviewTitle {
+    margin: 30px 0;
+}
+
+.commentReview  >p {
+    margin-bottom: 10px;
+}
+
+.reviewComment {
+    width: 90%;
+    text-overflow: clip;
+    margin: auto;
+}
+
